@@ -1,71 +1,17 @@
-let img1;
-let img3;
-
-
-var dragging = false; // Is the object being dragged?
-var rollover = false; // Is the mouse over the ellipse?
-
-var x, y, w, h; // Location and size
-var offsetX, offsetY; // Mouseclick offset
-
-function preload() {
-  img1 = loadImage("cool.png");
-  img3 = loadImage("EYE.png");
-
+function preload(){
+  img1 = loadImage("heart1.png");
+  img2 = loadImage("Addictions.png");
 }
-
 function setup() {
-  createCanvas(400, 600);
-
-  // Starting location
-  x = 150;
-  y = 100;
-  // Dimensions
-  w = 300;
-  h = 350;
+  createCanvas(600, 800);
+fill(0, 102);
+  background(img2); // Draw once to give a little color
 }
-
 function draw() {
-  background(img1);
-
-
-
-  // Is mouse over object
-  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
-    rollover = true;
-  } else {
-    rollover = false;
-  }
-
-  // Adjust location if being dragged
-  if (dragging) {
-    x = mouseX + offsetX;
-    y = mouseY + offsetY;
-  }
-
-  stroke(0);
-  // Different fill based on state
-  if (dragging) {
-    fill(50);
-  } else if (rollover) {
-    fill(100);
-  } else {
-    fill(175, 200);
-  }
-  image(img3, x, y, w, h);
-}
-
+} // Empty draw() keeps the program running
 function mousePressed() {
-  // Did I click on the rectangle?
-  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
-    dragging = true;
-    // If so, keep track of relative location of click to corner of rectangle
-    offsetX = x - mouseX;
-    offsetY = y - mouseY;
-  }
-}
-
-function mouseReleased() {
-  // Quit dragging
-  dragging = false;
+  let c = color('lightpink');
+  fill(c);
+  imageMode(CENTER);
+  image( img1, mouseX, mouseY);
 }
