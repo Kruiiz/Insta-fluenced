@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+body {
+  background-color: Pink;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+}
+a {
+color: #69CBBB;
+text-decoration: none;
+}
+
+/* mouse over link */
+  a:hover {
+      color: hotpink;
+    }
+
+
+img {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+}
