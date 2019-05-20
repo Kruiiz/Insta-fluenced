@@ -9,7 +9,7 @@ function setup() {
   createCanvas(800, 800);
   noStroke();
   fill(0);
-
+  
 }
 
 function draw() {
