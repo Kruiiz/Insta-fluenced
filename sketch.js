@@ -1,33 +1,71 @@
-function preload () {
-  img1 =loadImage("instaworst.png");
-  img2 =loadImage("IMNOTSAD.jpg");
-  img3 =loadImage("IMNOTSAD.jpg");
-  img4 =loadImage("IMNOTSAD.jpg");
-  img5 =loadImage("IMNOTSAD.jpg");
+let img1;
+let img3;
+
+
+var dragging = false; // Is the object being dragged?
+var rollover = false; // Is the mouse over the ellipse?
+
+var x, y, w, h; // Location and size
+var offsetX, offsetY; // Mouseclick offset
+
+function preload() {
+  img1 = loadImage("cool.png");
+  img3 = loadImage("EYE.png");
+
 }
+
 function setup() {
-  createCanvas(800, 800);
-  noStroke();
-  fill(0);
-  
+  createCanvas(400, 600);
+
+  // Starting location
+  x = 150;
+  y = 100;
+  // Dimensions
+  w = 300;
+  h = 350;
 }
 
 function draw() {
-  noTint();
   background(img1);
-  if ((mouseX <= 400) && (mouseY <= 400)) {
-    tint('pink');
-    image(img2, 0, 0);   // Upper-left
+
+
+
+  // Is mouse over object
+  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+    rollover = true;
+  } else {
+    rollover = false;
   }
-  else if ((mouseX <= 400) && (mouseY > 400)) {              tint('orange');
-    image(img3, 0, 400);  // Lower-left
+
+  // Adjust location if being dragged
+  if (dragging) {
+    x = mouseX + offsetX;
+    y = mouseY + offsetY;
   }
-  else if ((mouseX > 400) && (mouseY <= 400)) {
-    tint('lightgreen');
-    image(img4, 400, 0);  // Upper-right
+
+  stroke(0);
+  // Different fill based on state
+  if (dragging) {
+    fill(50);
+  } else if (rollover) {
+    fill(100);
+  } else {
+    fill(175, 200);
   }
-  else {
-    tint('magenta');
-    image(img5, 400, 400); // Lower-right
+  image(img3, x, y, w, h);
+}
+
+function mousePressed() {
+  // Did I click on the rectangle?
+  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
+    dragging = true;
+    // If so, keep track of relative location of click to corner of rectangle
+    offsetX = x - mouseX;
+    offsetY = y - mouseY;
   }
+}
+
+function mouseReleased() {
+  // Quit dragging
+  dragging = false;
 }
