@@ -1,6 +1,6 @@
 html, body {
-  margin: 0px auto;
-  width: 80px auto;
+  margin: 80px auto;
+  width: 100%;
   padding: 0;
 }
 canvas {
