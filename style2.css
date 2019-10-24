@@ -1,5 +1,6 @@
 html, body {
-  margin: 0;
+  margin: 0px auto;
+  width: 80px auto;
   padding: 0;
 }
 canvas {
@@ -28,3 +29,4 @@ img {
   margin: 0px auto;
   text-align: center;
 }
+
