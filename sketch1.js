@@ -3,7 +3,7 @@ function preload(){
   img2 = loadImage("Addictions.png");
 }
 function setup() {
-  createCanvas(600, 800);
+  createCanvas(800,1000);
 fill(0, 102);
   background(img2); // Draw once to give a little color
 }
