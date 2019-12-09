@@ -1,6 +1,6 @@
 body {
-  margin: 30px auto;
-  max-width: 1000px;
+  margin: 20px auto;
+  max-width: 900px;
   font-family: "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
   /* padding: 30px 20px; */
@@ -60,6 +60,7 @@ background-color: #f7f7f7;
 }
 
 .venus-item {
-
+margin-top: 70px;
+padding: 50px;
 background-color: #f7f7f7;
 }
