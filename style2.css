@@ -11,6 +11,10 @@ canvas {
   display: block;
 }
 
+body {
+
+  background-color: Pink;
+}
 
 .BGvideo {
 position: fixed;
