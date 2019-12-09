@@ -8,6 +8,13 @@ body {
 
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
 .BGvideo {
 position: fixed;
 top:0;
@@ -42,11 +49,13 @@ text-decoration: none;
       color: hotpink;
     }
 
-
 img {
   display: block;
   margin: 0px auto;
   text-align: center;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /* When you put a period in front of a CSS declaration, it indicates you are
