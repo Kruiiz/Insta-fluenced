@@ -15,7 +15,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(410, 610);
+  createCanvas(400, 600);
 
   // Starting location
   x = 150;
