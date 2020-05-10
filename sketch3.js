@@ -19,7 +19,7 @@ function draw() {
     tint('pink');
     image(img2, 0, 0);   // Upper-left
   }
-  else if ((mouseX <= 400) && (mouseY > 400)) {              tint('orange');
+  else if ((mouseX <= 400) && (mouseY > 400)) {              tint('yellow');
     image(img3, 0, 400);  // Lower-left
   }
   else if ((mouseX > 400) && (mouseY <= 400)) {
