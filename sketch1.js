@@ -1,3 +1,9 @@
+<style>
+body {
+  background-image: url("feel.gif"); no-repeat center center fixed; 
+  background-size: cover;
+}
+
 function preload(){
   img1 = loadImage("heart1.png");
   img2 = loadImage("Addictions.png");
