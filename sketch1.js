@@ -1,8 +1,9 @@
-<style>
-body {
-  background-image: url("feel.gif"); no-repeat center center fixed; 
-  background-size: cover;
-}
+// <style>
+// body {
+//   background-image: url("feel.gif"); no-repeat center center fixed;
+//   background-size: cover;
+// }
+// </style>
 
 function preload(){
   img1 = loadImage("heart1.png");
